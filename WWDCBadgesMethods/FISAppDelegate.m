@@ -30,6 +30,7 @@
         NSString *theCurrentSpeaker = speakers[i];
         FISAppDelegate *whatIsThis = [[FISAppDelegate alloc] init];
         
+        
         NSString *theCurrentBadge = [whatIsThis makeBadgeForSpeaker:theCurrentSpeaker];
         [badgeArray addObject:theCurrentBadge];
         
