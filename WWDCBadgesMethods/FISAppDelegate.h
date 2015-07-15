@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (NSString *)makeBadgeForSpeaker:(NSString *)speaker;
+- (NSMutableArray *)makeAllBadgesForSpeakers:(NSArray *)speakers;
+- (NSMutableArray *)greetAndAssignRoomsToSpeakers:(NSArray *)speakers;
+
 /*
  
  * Declare your custom methods in this space. Don't forget to end the statements with semicolons ";" !
