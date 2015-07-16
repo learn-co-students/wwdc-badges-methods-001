@@ -18,4 +18,9 @@
  
  */
 
+//- (NSString *)deliverSodaForSelection:(NSUInteger)selection withPaymentInCents:(NSUInteger)paymentInCents;
+- (NSString *)makeBadgeForSpeaker:(NSString *)speakers;
+- (NSMutableArray *)makeAllBadgesForSpeakers:(NSArray *)speakers;
+- (NSMutableArray *)greetAndAssignRoomsToSpeakers:(NSArray *)speakers;
+
 @end
