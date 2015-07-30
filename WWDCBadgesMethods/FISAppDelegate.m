@@ -18,31 +18,32 @@
 
 
 - (NSString *) makeBadgeForSpeaker: (NSString *)speaker {
+    NSString *names;
     for (NSUInteger i = 0; i < 8; i++) {
-        NSString *names = [NSString stringWithFormat:@"Hello, my name is %@.", speaker];
-        return names;
+        names = [NSString stringWithFormat:@"Hello, my name is %@.", speaker];
+
     }
-    return 0;
+    
+    return names;
 }
 
 - (NSMutableArray *) makeAllBadgesForSpeakers: (NSArray *)speakers {
     NSMutableArray *intro = [[NSMutableArray alloc] init];
     for(NSUInteger i=0;i<8;i++) {
-        [intro addObject:[NSString stringWithFormat:@"Hello, my name is %@., ",speakers[i]]];
-    return intro;
+        [intro addObject:[NSString stringWithFormat:@"Hello, my name is %@.",speakers[i]]];
+        
     }
-    return 0;
+    
+    return intro;
 }
 - (NSMutableArray *) greetAndAssignRoomsToSpeakers: (NSMutableArray *)speakers {
     NSMutableArray *fullIntro = [[NSMutableArray alloc] init];
     for(NSUInteger i=0;i<8;i++) {
-        NSString *welcome = [NSString stringWithFormat:@"Welcome, %@!", speakers];
-        NSString *dressingRoom = [NSString stringWithFormat:@"You'll be in dressing room number %li.", i];
-        NSString *fullWelcome = [welcome stringByAppendingString:dressingRoom];
-        [fullIntro addObject:fullWelcome];
-        return fullIntro;
-            }
-    return 0;
+        NSString *welcome = [NSString stringWithFormat:@"Welcome, %@! You'll be in dressing room %li.", speakers[i], i + 1];
+        [fullIntro addObject:welcome];
+    }
+    
+    return fullIntro;
 }
 
 @end
