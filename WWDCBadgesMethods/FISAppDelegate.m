@@ -13,6 +13,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     return YES;
+    
+    
+    
+    NSMutableArray *makeAllBadgesForSpeakers = [[NSMutableArray alloc]init];
+    
+    NSMutableArray *greetAndAssignRoomsToSpeakers = [[NSMutableArray alloc]init];
+    
+    NSString *speaker = @"Hello, my name is Inigo Montoya.";
+    
+    NSString *makeBadgeForSpeaker = speaker;
+    
+    NSLog(@"%@", makeBadgeForSpeaker);
+    
 }
 
 /*
