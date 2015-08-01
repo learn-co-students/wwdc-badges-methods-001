@@ -14,17 +14,41 @@
     
     return YES;
     
+}
+
+- (NSString *)makeBadgeForSpeaker:(NSString *)speaker {
     
+    NSString *badge = [NSString stringWithFormat:@"Hello, my name is %@.", speaker];
     
-    NSMutableArray *makeAllBadgesForSpeakers = [[NSMutableArray alloc]init];
+    return badge;
     
-    NSMutableArray *greetAndAssignRoomsToSpeakers = [[NSMutableArray alloc]init];
+}
+
+
+-(NSMutableArray *)makeAllBadgesForSpeakers:(NSArray *)speakers {
     
-    NSString *speaker = @"Hello, my name is Inigo Montoya.";
+    NSMutableArray *badges = [[NSMutableArray alloc]init];
     
-    NSString *makeBadgeForSpeaker = speaker;
+    for (NSUInteger i = 0; i < 8; i++) {
+        
+        badges[i] = [NSString stringWithFormat:@"Hello, my name is %@.", speakers[i]];
+        
+    }
     
-    NSLog(@"%@", makeBadgeForSpeaker);
+    return badges;
+    
+}
+
+- (NSMutableArray *)greetAndAssignRoomsToSpeakers:(NSArray *)speakers {
+    
+    NSMutableArray *roomAssignments = [[NSMutableArray alloc]init];
+    
+    for (NSUInteger i = 0; i < 8; i++) {
+        
+        roomAssignments[i] = [NSString stringWithFormat:@"Welcome, %@! You'll be in dressing room %lu.", speakers[i], i+1];
+    }
+    
+    return roomAssignments;
     
 }
 

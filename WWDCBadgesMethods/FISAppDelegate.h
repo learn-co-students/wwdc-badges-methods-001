@@ -14,9 +14,9 @@
 
 - (NSString *)makeBadgeForSpeaker:(NSString *)speaker;
 
-- (NSArray *)makeAllBadgesForSpeakers:(NSArray *)speakers;
+- (NSMutableArray *)makeAllBadgesForSpeakers:(NSArray *)speakers;
 
-- (NSArray *)greetAndAssignRoomsToSpeakers:(NSArray *)speakers;
+- (NSMutableArray *)greetAndAssignRoomsToSpeakers:(NSArray *)speakers;
 
     
     //@"Hello, my name is %@", speaker
