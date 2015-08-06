@@ -72,7 +72,7 @@ NSString *speaker = @"Inigo Montoya.";
                  @"George Boole",
                  @"Tim Bernes-Lee",
                  @"Jean Bartik"];
-    NSMutableArray *roomAssingments[8]; //define a mutable array to store the finished room assignments
+    NSMutableArray *roomAssingments = [[NSMutableArray alloc] initWithCapacity:8]; //define a mutable array to store the finished room assignments
     NSArray *roomNum = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8"]; //to store the room numbers
     for(NSUInteger i = 0; i < 8; i++){ //for loop to run through the speakers array
         speaker = speakers[i];
@@ -82,7 +82,7 @@ NSString *speaker = @"Inigo Montoya.";
         
     }
     
-    return roomAssingments[7]; //return the mutable array called roomAssignments
+    return roomAssingments; //return the mutable array called roomAssignments
 }
 
 
