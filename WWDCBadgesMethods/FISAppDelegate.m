@@ -23,7 +23,6 @@
 //variable for test #1 that prints out "Hello, my name is Inigo Montoya."
 
 NSString *speaker = @"Inigo Montoya.";
-
 //makeBadgeForSpeaker method
 -(NSString *)makeBadgeForSpeaker:(NSString *)speaker{ //return type string, accepts a string argument called speaker
    
@@ -76,13 +75,15 @@ NSString *speaker = @"Inigo Montoya.";
     NSArray *roomNum = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8"]; //to store the room numbers
     for(NSUInteger i = 0; i < 8; i++){ //for loop to run through the speakers array
         speaker = speakers[i];
-        NSString *yourRoom = [NSString stringWithFormat: @"Welcome %@! You'll be in room %@.", roomNum[i], speaker]; //to store the second string to be appended
+        NSString *yourRoom = [NSString stringWithFormat: @"Welcome %@! You'll be in room %@.", roomNum[i], speaker];//format and add strings
         [roomAssingments[i] addObject: yourRoom]; //add the final welcome string to the mutable array
         NSLog(@"%@", roomAssingments[i]); //print out each line of the mutable array
         
     }
     
     return roomAssingments; //return the mutable array called roomAssignments
+    
+    
 }
 
 
