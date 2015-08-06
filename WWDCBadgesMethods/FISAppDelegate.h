@@ -18,4 +18,8 @@
  
  */
 
+- (NSString *) makeBadgeForSpeaker: (NSString *) speaker;
+- (NSMutableArray *) makeAllBadgesForSpeakers: (NSArray *) speakers;
+- (NSMutableArray *) greetAndAssignRoomsToSpeakers: (NSArray *) speakers;
+
 @end
