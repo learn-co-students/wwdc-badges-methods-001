@@ -10,12 +10,12 @@
 
 @interface FISAppDelegate : UIResponder <UIApplicationDelegate>
 
+- (NSString *)badgeForSpeaker:(NSString *) speaker;
+- (NSArray *)badgesForSpeakers:(NSArray *) speakers;
+- (NSArray *)greetingsAndRoomAssignmentsForSpeakers:(NSArray *) speakers;
+
+
 @property (strong, nonatomic) UIWindow *window;
 
-/*
- 
- * Declare your custom methods in this space. Don't forget to end the statements with semicolons ";" !
- 
- */
 
 @end
