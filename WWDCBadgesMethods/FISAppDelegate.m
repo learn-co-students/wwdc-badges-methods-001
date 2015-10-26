@@ -27,7 +27,7 @@
 
 
 
-// Not sure why I can't get these last two tests to work. I think I'm getting the correct output.
+// Not sure why I can't get this second test to pass. I think I'm getting the correct output.
 
 
 - (NSArray *)badgesForSpeakers:(NSArray *)speakers{
@@ -35,7 +35,7 @@
     NSMutableArray *introSpeakersArray =[[NSMutableArray alloc]init];
     NSInteger i;
     
-    for (i = 0; i <= [speakers count]; i++) {
+    for (i = 0; i < [speakers count]; i++) {
         NSString *intro = [@"Hello, my name is " stringByAppendingString:speakers[i]];
         NSString *period = [intro stringByAppendingString:@"."];
         [introSpeakersArray addObject:period];
@@ -53,7 +53,7 @@
     
     NSInteger i;
     
-    for (i = 0; i <=[speakers count]; i++) {
+    for (i = 0; i <[speakers count]; i++) {
         welcomeString = [NSString stringWithFormat:@"Welcome, %@! You'll be in dressing room %li",speakers[i],(long)i + 1];
         [welcomeArray addObject:welcomeString];
         NSLog(@"%@",welcomeArray);
