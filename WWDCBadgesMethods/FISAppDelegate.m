@@ -15,10 +15,40 @@
     return YES;
 }
 
-/*
- 
- * Define your methods between application:didFinishLaunchingWithOptions and the @end marker
- 
- */
+-(NSString*) badgeForSpeaker:(NSString*)speaker
+{
+//Mistake was making the return string a regular NSString, obviously want to add to the string therefore must be NSMUTABLE STRING, DON'T FORGET!!
+    NSMutableString *fullGreeting = [[NSMutableString alloc]init];
+    
+    [fullGreeting appendString:@"Hello, my name is "];
+    [fullGreeting appendString:speaker];
+    [fullGreeting appendString:@"."]; 
+    NSLog(@"%@", fullGreeting); 
+    
+    return fullGreeting;
+}
+-(NSArray*) badgesForSpeakers:(NSArray*)speakers
+{
+    NSMutableArray *completeGreetings = [[NSMutableArray alloc]init];
+    for (NSUInteger i = 0; i < [speakers count]; i++)
+    {
+        NSString *greetingMessage = [NSString stringWithFormat:@"Hello, my name is %@.",speakers[i]];
+        
+        [completeGreetings addObject:greetingMessage]; 
+    }
+    return completeGreetings;
+}
+-(NSArray*) greetingsAndRoomAssignmentsForSpeakers:(NSArray*)speakers
+{
+    NSMutableArray *roomAndGreeting = [[NSMutableArray alloc]init];
+    for(NSUInteger i = 0; i < [speakers count]; i++)
+    {
+        NSUInteger roomCount = i + 1;
+        NSString *greetingMessage = [NSString stringWithFormat:@"Welcome, %@! You'll be in dressing room %lu.",speakers[i], roomCount];
+        [roomAndGreeting addObject:greetingMessage]; 
+    }
+    
+    return roomAndGreeting;
+}
 
 @end
