@@ -12,10 +12,15 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-/*
- 
- * Declare your custom methods in this space. Don't forget to end the statements with semicolons ";" !
- 
- */
+- (NSString *) makeBadgeForSpeaker: (NSString*)speakers;
+
+- (NSMutableArray*) makeAllBadgesForSpeakers: (NSArray*)speakers;
+
+- (NSMutableArray*) greetAndAssignRoomsToSpeakers: (NSArray*) speakers;
+
 
 @end
+
+
+//ReturnType *captureVariable = [recipientObject methodNameArgument:argumentVariable];
+// - (NSString *)deliverSodaForSelection:(NSUInteger)selection withPaymentInCents:(NSUInteger)paymentInCents;
