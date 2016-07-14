@@ -12,10 +12,36 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-/*
- 
- * Declare your custom methods in this space. Don't forget to end the statements with semicolons ";" !
- 
- */
+- (NSString *)makeBadgeForSpeaker:(NSString *)speaker;
+
+- (NSMutableArray *)makeAllBadgesForSpeakers:(NSArray *)speakers;
+
+- (NSMutableArray *)greetAndAssignRoomsToSpeakers:(NSArray *)speakers;
+
+    
+    //@"Hello, my name is %@", speaker
+
+
+    
+  /*  for (NSUInteger i = 0; i < 8; i++) {
+        (NSString) *speaker = (NSArray)speakers[i];
+    }
+    
+    return nil
+    
+    //makeBadgeForSpeaker[i], speaker;
+
+}
+
+- (NSMutableArray *)greetAndAssignRoomsToSpeakers:(NSArray *) speakers {
+    
+    for (NSUInteger i = 0; i < 8; i++) {
+        return nil
+        
+        //@"Welcome, %@! You'll be in dressing room %@.", speakers[i], i+1;
+    }
+    
+}
+   */
 
 @end
