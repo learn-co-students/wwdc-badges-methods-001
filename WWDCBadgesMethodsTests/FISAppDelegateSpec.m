@@ -29,7 +29,7 @@ describe(@"FISAppDelegate", ^{
                       @"Margaret Hamilton",
                       @"George Boole",
                       @"Tim Berners-Lee",
-                      @"Jean Bartik"          ];
+                      @"Jean Bartik"];
         
         badges = @[ @"Hello, my name is Adele Goldberg.",
                     @"Hello, my name is Edsger Dijkstra.",
