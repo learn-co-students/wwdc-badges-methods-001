@@ -12,6 +12,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+       NSArray *Speaker = @[ @"Adele Goldberg", @"Edsger Dijkstra", @"Joan Clarke", @"Clarence Ellis", @"Margaret Hamilton", @"Meorge Boole", @"Tim Berners-Lee", @"Jean Bartik" ];
+    
+     for (NSUInteger i = 0; i < [Speaker count]; i++)  {
+
+//badgeForSpeaker:
+         NSLog(@"Hello my name is, %@!", Speaker[i] );
+         
+// badgesForSpeakers
+         NSLog(@"Hello my name is, %@!", Speaker[i] );
+         
+// greetingsAndRoomAssignmentsForSpeakers:
+         NSLog(@"Welcome, %@!", Speaker[i] ) NSLog(@"You'll be in dressing room, %@!", roomNumber[i] );
+        
+
+
+    }
     return YES;
 }
 
